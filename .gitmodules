@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/PureLayout"]
+	path = Carthage/Checkouts/PureLayout
+	url = https://github.com/PureLayout/PureLayout.git

@@ -11,4 +11,6 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true
     spec.source = { git: "https://github.com/k3zi/KZ.git", tag: "v#{spec.version}", submodules: true }
     spec.source_files = "KZ/**/*.{h,swift}"
+
+    spec.dependency "PureLayout"
 end
