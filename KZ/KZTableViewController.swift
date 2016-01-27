@@ -212,4 +212,9 @@ public class KZTableViewController: KZViewController, UITableViewDataSource, UIT
 public struct TableSection {
     public var sectionName: String
     public var sectionObjects: [Any]
+    
+    public init(sectionName: String, sectionObjects: [Any]) {
+        self.sectionName = sectionName
+        self.sectionObjects = sectionObjects
+    }
 }
