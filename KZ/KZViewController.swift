@@ -12,8 +12,7 @@ public class KZViewController: UIViewController {
     var didSetConstraints = false
     public var isReady = false
     
-    var didPresentVC = false
-    public var settings = VCSettings()
+    public var didPresentVC = false
     
     var timer: NSTimer?
     
@@ -28,7 +27,6 @@ public class KZViewController: UIViewController {
         super.viewWillAppear(animated)
         self.view.setNeedsUpdateConstraints()
 
-        
         didPresentVC = false
     }
     
@@ -74,10 +72,4 @@ public class KZViewController: UIViewController {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-}
-
-
-public struct VCSettings {
-    var customTitleView: UIView?
-    var title = ""
 }
