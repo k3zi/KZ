@@ -18,7 +18,7 @@ public class KZTableViewController: KZViewController, UITableViewDataSource, UIT
     
     //MARK: Setup View
     
-    convenience init(createTable: Bool) {
+    public convenience init(createTable: Bool) {
         self.init()
         self.ct = createTable
     }

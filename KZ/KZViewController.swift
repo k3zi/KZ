@@ -63,11 +63,11 @@ public class KZViewController: UIViewController {
         super.updateViewConstraints()
     }
 
-    func setupConstraints() {
+    public func setupConstraints() {
 
     }
     
-    dynamic func fetchData() {
+    public dynamic func fetchData() {
         
     }
     
@@ -77,7 +77,7 @@ public class KZViewController: UIViewController {
 }
 
 
-struct VCSettings {
+public struct VCSettings {
     var customTitleView: UIView?
     var title = ""
 }
