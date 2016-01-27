@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KZTableViewController: KZViewController, UITableViewDataSource, UITableViewDelegate {
+public class KZTableViewController: KZViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableView: UITableView? = nil
     var items = [Any]()
@@ -23,7 +23,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         self.ct = createTable
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -40,7 +40,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         }
     }
     
-    override func setupConstraints() {
+    override public func setupConstraints() {
         super.setupConstraints()
         
         if ct {
@@ -53,11 +53,11 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
     
     //MARK: Tableview Datasource/Delegate
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.tableViewCellData(tableView, section: section).count == 0 && showsNoText {
             return 1
         }
@@ -65,23 +65,23 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return self.tableViewCellData(tableView, section: section).count
     }
     
-    func tableViewCellClass(tableView: UITableView, indexPath: NSIndexPath? = nil) -> KZTableViewCell.Type {
+    public func tableViewCellClass(tableView: UITableView, indexPath: NSIndexPath? = nil) -> KZTableViewCell.Type {
         return KZTableViewCell.self
     }
     
-    func tableViewCellData(tableView: UITableView, section: Int) -> [Any] {
+    public func tableViewCellData(tableView: UITableView, section: Int) -> [Any] {
         return items
     }
     
-    func tableViewNoDataText(tableView: UITableView) -> String {
+    public func tableViewNoDataText(tableView: UITableView) -> String {
         return "No Results Found"
     }
     
-    func tableViewShowsSectionHeader(tableView: UITableView) -> Bool {
+    public func tableViewShowsSectionHeader(tableView: UITableView) -> Bool {
         return false
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if self.tableViewCellData(tableView, section: indexPath.section).count == 0 && showsNoText {
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "NoneFound")
             cell.textLabel?.numberOfLines = 0
@@ -106,7 +106,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if self.tableViewCellData(tableView, section: indexPath.section).count == 0 && showsNoText {
             return tableView.frame.height
         }
@@ -125,7 +125,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return cell!.getHeight()
     }
     
-    func tableView(_tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(_tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if cell.respondsToSelector("setSeparatorInset:") {
             cell.separatorInset = UIEdgeInsetsZero
         }
@@ -141,7 +141,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
     
     //MARK: Section Header/Footer
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if tableViewShowsSectionHeader(tableView) {
             let view = UIView(frame: CGRectMake(0.0, 0.0, self.view.frame.size.width, 20))
             view.backgroundColor = RGB(240)
@@ -168,7 +168,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return nil
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if tableViewShowsSectionHeader(tableView) {
             return "Pending"
         }
@@ -176,7 +176,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return nil
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if tableViewShowsSectionHeader(tableView) {
             return 19.0
         }
@@ -184,7 +184,7 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return CGFloat.min
     }
     
-    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    public func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
         var x = [String]()
         if tableViewShowsSectionHeader(tableView) {
             for var i = 0; i < numberOfSectionsInTableView(tableView); i++ {
@@ -199,17 +199,17 @@ class KZTableViewController: KZViewController, UITableViewDataSource, UITableVie
         return []
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return CGFloat.min
     }
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
-struct TableSection {
+public struct TableSection {
     var sectionName: String
     var sectionObjects: [Any]
 }

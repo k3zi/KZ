@@ -8,49 +8,49 @@
 
 import UIKit
 
-class KZIntrinsicTableView: UITableView {
+public class KZIntrinsicTableView: UITableView {
 
-    override func intrinsicContentSize() -> CGSize {
+    override public func intrinsicContentSize() -> CGSize {
         self.layoutIfNeeded()
         return CGSize(width: UIViewNoIntrinsicMetric, height: self.contentSize.height)
     }
 
-    override func endUpdates() {
+    override public func endUpdates() {
         super.endUpdates()
         self.invalidateIntrinsicContentSize()
     }
     
-    override func reloadData() {
+    override public func reloadData() {
         super.reloadData()
         self.invalidateIntrinsicContentSize()
     }
     
-    override func reloadRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
+    override public func reloadRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
         super.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }
     
-    override func reloadSections(sections: NSIndexSet, withRowAnimation animation: UITableViewRowAnimation) {
+    override public func reloadSections(sections: NSIndexSet, withRowAnimation animation: UITableViewRowAnimation) {
         super.reloadSections(sections, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }
     
-    override func insertRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
+    override public func insertRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
         super.insertRowsAtIndexPaths(indexPaths, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }
     
-    override func insertSections(sections: NSIndexSet, withRowAnimation animation: UITableViewRowAnimation) {
+    override public func insertSections(sections: NSIndexSet, withRowAnimation animation: UITableViewRowAnimation) {
         super.insertSections(sections, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }
     
-    override func deleteRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
+    override public func deleteRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
         super.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }
     
-    override func deleteSections(sections: NSIndexSet, withRowAnimation animation: UITableViewRowAnimation) {
+    override public func deleteSections(sections: NSIndexSet, withRowAnimation animation: UITableViewRowAnimation) {
         super.deleteSections(sections, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }

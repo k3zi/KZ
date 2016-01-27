@@ -8,15 +8,15 @@
 
 import Foundation
 
-func RGB(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 255.0) -> UIColor {
+public func RGB(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 255.0) -> UIColor {
     return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a/255.0)
 }
 
-func RGB(x: CGFloat, a: CGFloat = 255.0) -> UIColor {
+public func RGB(x: CGFloat, a: CGFloat = 255.0) -> UIColor {
     return RGB(x, g: x, b: x, a: a)
 }
 
-func HEX(str: String) -> UIColor {
+public func HEX(str: String) -> UIColor {
     let hex = str.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
     var int = UInt32()
     NSScanner(string: hex).scanHexInt(&int)
@@ -33,7 +33,7 @@ func HEX(str: String) -> UIColor {
     return RGB(CGFloat(r), g: CGFloat(g), b: CGFloat(b))
 }
 
-func delay(delay:Double, closure:()->()) {
+public func delay(delay:Double, closure:()->()) {
     dispatch_after(
         dispatch_time(
             DISPATCH_TIME_NOW,

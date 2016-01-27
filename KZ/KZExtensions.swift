@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension UIButton {
-    public override func intrinsicContentSize() -> CGSize {
+public extension UIButton {
+    override public func intrinsicContentSize() -> CGSize {
         let intrinsicContentSize = super.intrinsicContentSize()
         let adjustedWidth = intrinsicContentSize.width + titleEdgeInsets.left + titleEdgeInsets.right
         let adjustedHeight = intrinsicContentSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom
@@ -17,32 +17,32 @@ extension UIButton {
     }
 }
 
-extension String {
-    func firstCharacterUpperCase() -> String {
+public extension String {
+    public func firstCharacterUpperCase() -> String {
         let lowercaseString = self.lowercaseString
         
         return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
     }
 }
 
-extension UIViewController {
-    func showError(error: String) {
+public extension UIViewController {
+    public func showError(error: String) {
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func showSuccess(success: String) {
+    public func showSuccess(success: String) {
         let alert = UIAlertController(title: "Success", message: success, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func handleResponse(response: AnyObject?, error: NSError?, successCompletion: AnyObject -> Void) {
+    public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: AnyObject -> Void) {
         handleResponse(response, error: error, successCompletion: successCompletion)
     }
     
-    func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (() -> Void)? = nil) {
+    public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (() -> Void)? = nil) {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             if let error = error {
                 self.showError(error.localizedDescription)
@@ -70,7 +70,7 @@ extension UIViewController {
         })
     }
     
-    func goBack() {
+    public func goBack() {
         if let nav = self.navigationController {
             nav.popViewControllerAnimated(true)
         } else if let vc = self.presentingViewController {

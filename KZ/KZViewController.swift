@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KZViewController: UIViewController {
+public class KZViewController: UIViewController {
     var didSetConstraints = false
     var isReady = false
     
@@ -17,14 +17,14 @@ class KZViewController: UIViewController {
     
     var timer: NSTimer?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.whiteColor()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.view.setNeedsUpdateConstraints()
 
@@ -32,7 +32,7 @@ class KZViewController: UIViewController {
         didPresentVC = false
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         if timer == nil {
@@ -40,7 +40,7 @@ class KZViewController: UIViewController {
         }
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override public func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
         if timer != nil {
@@ -49,12 +49,12 @@ class KZViewController: UIViewController {
         }
     }
     
-    override func presentViewController(viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
+    override public func presentViewController(viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
         super.presentViewController(viewControllerToPresent, animated: flag, completion: completion)
         didPresentVC = true
     }
     
-    override func updateViewConstraints() {
+    override public func updateViewConstraints() {
         if !didSetConstraints {
             setupConstraints()
             didSetConstraints = true

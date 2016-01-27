@@ -9,14 +9,14 @@
 import UIKit
 import PureLayout
 
-class KZTableViewCell: UITableViewCell {
+public class KZTableViewCell: UITableViewCell {
     let topSeperator = UIView()
     let bottomSeperator = UIView()
     
     var didSetupConstraints = false
     var model: Any?
     
-    override required init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.clearColor()
         
@@ -28,7 +28,7 @@ class KZTableViewCell: UITableViewCell {
         self.contentView.bounds.size.height = 99999
     }
     
-    override func updateConstraints() {
+    override public func updateConstraints() {
         super.updateConstraints()
         if didSetupConstraints {
             return
@@ -47,7 +47,7 @@ class KZTableViewCell: UITableViewCell {
         didSetupConstraints = true
     }
     
-    func getHeight() -> CGFloat {
+    public func getHeight() -> CGFloat {
         self.contentView.bounds.size.height = 99999
         self.setNeedsUpdateConstraints()
         self.updateConstraints()
@@ -61,7 +61,7 @@ class KZTableViewCell: UITableViewCell {
         return height + CGFloat(1.0)
     }
     
-    func setIndexPath(indexPath: NSIndexPath, last: Bool) {
+    public func setIndexPath(indexPath: NSIndexPath, last: Bool) {
         if indexPath.row == 0 {
             topSeperator.alpha = 0.0
         } else {
@@ -69,17 +69,17 @@ class KZTableViewCell: UITableViewCell {
         }
     }
     
-    func setContent(content: Any) {
+    public func setContent(content: Any) {
         model = content
         
         fillInCellData()
     }
     
-    func fillInCellData() {
+    public func fillInCellData() {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
