@@ -10,8 +10,8 @@ import UIKit
 
 public class KZCollectionViewController: KZViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var collectionView: UICollectionView? = nil
-    var items = [AnyObject]()
+    public var collectionView: UICollectionView? = nil
+    public var items = [AnyObject]()
     
     override public func viewDidLoad() {
         super.viewDidLoad()

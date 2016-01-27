@@ -9,72 +9,94 @@
 import Foundation
 
 public extension UIButton {
-    override public func intrinsicContentSize() -> CGSize {
-        let intrinsicContentSize = super.intrinsicContentSize()
-        let adjustedWidth = intrinsicContentSize.width + titleEdgeInsets.left + titleEdgeInsets.right
-        let adjustedHeight = intrinsicContentSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom
-        return CGSize(width: adjustedWidth, height: adjustedHeight)
-    }
+	override public func intrinsicContentSize() -> CGSize {
+		let intrinsicContentSize = super.intrinsicContentSize()
+		let adjustedWidth = intrinsicContentSize.width + titleEdgeInsets.left + titleEdgeInsets.right
+		let adjustedHeight = intrinsicContentSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom
+		return CGSize(width: adjustedWidth, height: adjustedHeight)
+	}
 }
 
 public extension String {
-    public func firstCharacterUpperCase() -> String {
-        let lowercaseString = self.lowercaseString
-        
-        return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
-    }
+	public func firstCharacterUpperCase() -> String {
+		let lowercaseString = self.lowercaseString
+
+		return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
+	}
 }
 
 public extension UIViewController {
-    public func showError(error: String) {
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
+
+	/**
+	 Displays an error alert to the user
+
+	 - Parameters:
+	 - message: The error message to display in the alert
+	 */
+	public func showError(message: String) {
+		showAlert("Error", message: message)
+	}
     
-    public func showSuccess(success: String) {
-        let alert = UIAlertController(title: "Success", message: success, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
+    /**
+    Displays a success alert to the user
     
-    public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: AnyObject -> Void) {
-        handleResponse(response, error: error, successCompletion: successCompletion)
-    }
-    
-    public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (() -> Void)? = nil) {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            if let error = error {
-                self.showError(error.localizedDescription)
-                if let errorCompletion = errorCompletion {
-                    errorCompletion()
-                }
-            } else if let response = response {
-                if let success = response["success"] as? Bool  {
-                    if success {
-                        if let result = response["result"] {
-                            if let result = result {
-                                if let successCompletion = successCompletion {
-                                    successCompletion(result)
-                                }
-                            }
-                        }
-                    } else if let error = response["error"] as? String {
-                        self.showError(error)
-                        if let errorCompletion = errorCompletion {
-                            errorCompletion()
-                        }
-                    }
-                }
-            }
-        })
-    }
-    
-    public func goBack() {
-        if let nav = self.navigationController {
-            nav.popViewControllerAnimated(true)
-        } else if let vc = self.presentingViewController {
-            vc.dismissViewControllerAnimated(true, completion: nil)
-        }
-    }
+    - Parameters:
+    - message: The success message to display in the alert
+    */
+	public func showSuccess(message: String) {
+		showAlert("Success", message: message)
+	}
+
+	/**
+	 Displays alert to user
+
+	 - Parameters:
+	 - title: The title of the alert
+	 - message: The message to place in the alert
+	 */
+	func showAlert(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+		alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+		self.presentViewController(alert, animated: true, completion: nil)
+	}
+
+	public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: AnyObject -> Void) {
+		handleResponse(response, error: error, successCompletion: successCompletion)
+	}
+
+	public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (() -> Void)? = nil) {
+		dispatch_async(dispatch_get_main_queue(), { () -> Void in
+				if let error = error {
+					self.showError(error.localizedDescription)
+					if let errorCompletion = errorCompletion {
+						errorCompletion()
+					}
+				} else if let response = response {
+					if let success = response["success"] as? Bool {
+						if success {
+							if let result = response["result"] {
+								if let result = result {
+									if let successCompletion = successCompletion {
+										successCompletion(result)
+									}
+								}
+							}
+						} else if let error = response["error"] as? String {
+							self.showError(error)
+							if let errorCompletion = errorCompletion {
+								errorCompletion()
+							}
+						}
+					}
+				}
+			})
+	}
+
+	public func goBack() {
+		if let nav = self.navigationController {
+			nav.popViewControllerAnimated(true)
+		} else if let vc = self.presentingViewController {
+			vc.dismissViewControllerAnimated(true, completion: nil)
+		}
+	}
 }

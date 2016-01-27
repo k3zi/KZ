@@ -10,11 +10,11 @@ import UIKit
 import PureLayout
 
 public class KZTableViewCell: UITableViewCell {
-    let topSeperator = UIView()
-    let bottomSeperator = UIView()
+    public let topSeperator = UIView()
+    public let bottomSeperator = UIView()
     
     var didSetupConstraints = false
-    var model: Any?
+    public var model: Any?
     
     override required public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

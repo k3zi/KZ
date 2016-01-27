@@ -10,10 +10,10 @@ import UIKit
 
 public class KZViewController: UIViewController {
     var didSetConstraints = false
-    var isReady = false
+    public var isReady = false
     
     var didPresentVC = false
-    var settings = VCSettings()
+    public var settings = VCSettings()
     
     var timer: NSTimer?
     

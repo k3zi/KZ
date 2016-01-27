@@ -10,11 +10,11 @@ import UIKit
 
 public class KZTableViewController: KZViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var tableView: UITableView? = nil
-    var items = [Any]()
+    public var tableView: UITableView? = nil
+    public var items = [Any]()
     var offscreenCells = [String: KZTableViewCell]()
-    var ct = true
-    var showsNoText = true
+    public var ct = true
+    public var showsNoText = true
     
     //MARK: Setup View
     
