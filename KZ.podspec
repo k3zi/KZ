@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name = "KZ"
-    spec.version = "1.2.1"
+    spec.version = "1.2.2"
     spec.summary = "Framework base for iOS projects"
     spec.homepage = "http://kez.io"
     spec.license = { type: 'MIT', file: 'LICENSE' }
