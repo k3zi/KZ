@@ -210,6 +210,6 @@ public class KZTableViewController: KZViewController, UITableViewDataSource, UIT
 }
 
 public struct TableSection {
-    var sectionName: String
-    var sectionObjects: [Any]
+    public var sectionName: String
+    public var sectionObjects: [Any]
 }
