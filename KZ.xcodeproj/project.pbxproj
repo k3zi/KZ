@@ -17,6 +17,14 @@
 		EAD9CF6B1C56F3CC009FC9AA /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9CF6A1C56F3CC009FC9AA /* PureLayout.framework */; };
 		EAD9CF6D1C56F627009FC9AA /* KZFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */; settings = {ASSET_TAGS = (); }; };
 		EAD9CF6F1C56F683009FC9AA /* KZExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		EAF08F551C584AA000163104 /* KZViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */; };
+		EAF08F561C584AA000163104 /* KZCollectionViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF2F1C56F114009FC9AA /* KZCollectionViewController.swift */; };
+		EAF08F571C584AA000163104 /* KZTableViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF301C56F114009FC9AA /* KZTableViewController.swift */; };
+		EAF08F581C584AA000163104 /* KZIntrinsicTableView.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF341C56F126009FC9AA /* KZIntrinsicTableView.swift */; };
+		EAF08F591C584AA000163104 /* KZIntrinsicCollectionView.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF351C56F126009FC9AA /* KZIntrinsicCollectionView.swift */; };
+		EAF08F5A1C584AA000163104 /* KZTableViewCell.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF381C56F18F009FC9AA /* KZTableViewCell.swift */; };
+		EAF08F5B1C584AA000163104 /* KZFunctions.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */; };
+		EAF08F5C1C584AA000163104 /* KZExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +96,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAD9CF271C56B7B0009FC9AA /* KZ.h in Headers */,
+				EAF08F551C584AA000163104 /* KZViewController.swift in Headers */,
+				EAF08F561C584AA000163104 /* KZCollectionViewController.swift in Headers */,
+				EAF08F571C584AA000163104 /* KZTableViewController.swift in Headers */,
+				EAF08F581C584AA000163104 /* KZIntrinsicTableView.swift in Headers */,
+				EAF08F591C584AA000163104 /* KZIntrinsicCollectionView.swift in Headers */,
+				EAF08F5A1C584AA000163104 /* KZTableViewCell.swift in Headers */,
+				EAF08F5B1C584AA000163104 /* KZFunctions.swift in Headers */,
+				EAF08F5C1C584AA000163104 /* KZExtensions.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
