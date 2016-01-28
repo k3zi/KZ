@@ -44,7 +44,13 @@ public class KZTableViewCell: UITableViewCell {
         topSeperator.autoPinEdgeToSuperviewEdge(.Left)
         topSeperator.autoPinEdgeToSuperviewEdge(.Right)
         
+        setupConstraints()
+        
         didSetupConstraints = true
+    }
+    
+    func setupConstraints() {
+        
     }
     
     public func getHeight() -> CGFloat {
