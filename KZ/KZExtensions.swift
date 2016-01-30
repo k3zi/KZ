@@ -15,6 +15,16 @@ public extension UIButton {
 		let adjustedHeight = intrinsicContentSize.height + titleEdgeInsets.top + titleEdgeInsets.bottom
 		return CGSize(width: adjustedWidth, height: adjustedHeight)
 	}
+    
+    public func setBackgroundColor(color: UIColor, forState: UIControlState) {
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext(), color.CGColor)
+        CGContextFillRect(UIGraphicsGetCurrentContext(), CGRect(x: 0, y: 0, width: 1, height: 1))
+        let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        self.setBackgroundImage(colorImage, forState: forState)
+    }
 }
 
 public extension String {
