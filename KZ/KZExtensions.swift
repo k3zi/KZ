@@ -71,7 +71,7 @@ public extension UIViewController {
 	}
 
 	public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: AnyObject -> Void) {
-		handleResponse(response, error: error, successCompletion: successCompletion)
+		handleResponse(response, error: error, successCompletion: successCompletion, errorCompletion: nil)
 	}
 
 	public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (() -> Void)? = nil) {
