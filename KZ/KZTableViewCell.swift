@@ -51,32 +51,7 @@ public class KZTableViewCell: UITableViewCell {
     }
     
     func setupConstraints() {
-        trailingDetailConstraint = NSLayoutConstraint(item: contentView, attribute: .Right, relatedBy: .Equal, toItem: rightLabel, attribute: .Right, multiplier: 1, constant: 15)
-        contentView.addConstraint(trailingDetailConstraint)
-    }
-    
-    override public var accessoryType: UITableViewCellAccessoryType {
-        didSet {
-            if accessoryType == .None {
-                trailingDetailConstraint.constant = 15
-            }
-            else {
-                trailingDetailConstraint.constant = 0
-            }
-            layoutIfNeeded()
-        }
-    }
-    
-    override public var editingAccessoryType: UITableViewCellAccessoryType {
-        didSet {
-            if accessoryType == .None {
-                trailingDetailConstraint.constant = 15
-            }
-            else {
-                trailingDetailConstraint.constant = 0
-            }
-            layoutIfNeeded()
-        }
+        
     }
     
     public func getHeight() -> CGFloat {
