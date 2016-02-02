@@ -11,7 +11,8 @@ import UIKit
 public class KZViewController: UIViewController {
     var didSetConstraints = false
     public var isReady = false
-    
+    public var fetchAUtomatically = true
+    public var fetchOnLoad = true
     public var didPresentVC = false
     
     var timer: NSTimer?
@@ -21,6 +22,9 @@ public class KZViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.whiteColor()
+        if fetchOnLoad {
+            self.fetchData()
+        }
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -33,7 +37,7 @@ public class KZViewController: UIViewController {
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if timer == nil {
+        if timer == nil && fetchAUtomatically {
             timer = NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: Selector("fetchData"), userInfo: nil, repeats: true)
         }
     }
