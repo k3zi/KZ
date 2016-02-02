@@ -74,13 +74,13 @@ public extension UIViewController {
 		handleResponse(response, error: error, successCompletion: successCompletion, errorCompletion: nil)
 	}
 
-	public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (() -> Void)? = nil) {
+	public func handleResponse(response: AnyObject?, error: NSError?, successCompletion: (AnyObject -> Void)? = nil, errorCompletion: (String -> Void)? = nil) {
 		dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				if let error = error {
-					self.showError(error.localizedDescription)
 					if let errorCompletion = errorCompletion {
-						errorCompletion()
+						errorCompletion(error.localizedDescription)
 					}
+                    self.showError(error.localizedDescription)
 				} else if let response = response {
 					if let success = response["success"] as? Bool {
 						if success {
@@ -93,9 +93,10 @@ public extension UIViewController {
 							}
 						} else if let error = response["error"] as? String {
 							self.showError(error)
-							if let errorCompletion = errorCompletion {
-								errorCompletion()
-							}
+                            if let errorCompletion = errorCompletion {
+                                errorCompletion(error)
+                            }
+                            self.showError(error)
 						}
 					}
 				}
