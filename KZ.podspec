@@ -1,5 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name = "KZ"
+
     spec.version = “1.3.1”
     spec.summary = "Framework base for iOS projects"
     spec.homepage = "http://kez.io"
