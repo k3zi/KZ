@@ -21,7 +21,9 @@ public class KZScrollViewController: KZViewController {
         view.addSubview(scrollView)
     }
 
-    public func setupConstraints() {
+    public override func setupConstraints() {
+        super.setupConstraints()
+        
         scrollView.autoPinEdgeToSuperviewEdge(.Left)
         scrollView.autoPinEdgeToSuperviewEdge(.Right)
         scrollView.autoPinEdgeToSuperviewEdge(.Top)
