@@ -29,6 +29,7 @@ public class KZScrollViewController: KZViewController {
         scrollView.autoPinEdgeToSuperviewEdge(.Top)
         scrollView.autoPinToBottomLayoutGuideOfViewController(self, withInset: 0)
         
+        contentView.autoPinEdgeToSuperviewEdge(.Right)
         contentView.autoPinEdgeToSuperviewEdge(.Left)
         contentView.autoPinEdgeToSuperviewEdge(.Top)
         contentView.autoPinEdgeToSuperviewEdge(.Bottom)
