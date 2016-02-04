@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA481DF21C631890008E3E6E /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA481DF11C631890008E3E6E /* Reusable.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		EA481DF41C63223A008E3E6E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA481DF31C63223A008E3E6E /* Reusable.swift */; };
+		EA481DF61C6322AD008E3E6E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA481DF51C6322AD008E3E6E /* NibLoadable.swift */; };
 		EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */; };
 		EAD9CF271C56B7B0009FC9AA /* KZ.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF261C56B7B0009FC9AA /* KZ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAD9CF311C56F114009FC9AA /* KZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */; };
@@ -30,7 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA481DF11C631890008E3E6E /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
+		EA481DF31C63223A008E3E6E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		EA481DF51C6322AD008E3E6E /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZScrollViewController.swift; sourceTree = "<group>"; };
 		EAD9CF231C56B7B0009FC9AA /* KZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD9CF261C56B7B0009FC9AA /* KZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZ.h; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA481DF21C631890008E3E6E /* Reusable.framework in Frameworks */,
 				EAD9CF6B1C56F3CC009FC9AA /* PureLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +63,6 @@
 		EAD9CF191C56B7B0009FC9AA = {
 			isa = PBXGroup;
 			children = (
-				EA481DF11C631890008E3E6E /* Reusable.framework */,
 				EAD9CF251C56B7B0009FC9AA /* KZ */,
 				EAD9CF241C56B7B0009FC9AA /* Products */,
 				EAD9CF6A1C56F3CC009FC9AA /* PureLayout.framework */,
@@ -90,6 +90,8 @@
 				EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */,
 				EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */,
 				EAD9CF261C56B7B0009FC9AA /* KZ.h */,
+				EA481DF51C6322AD008E3E6E /* NibLoadable.swift */,
+				EA481DF31C63223A008E3E6E /* Reusable.swift */,
 				EAD9CF281C56B7B0009FC9AA /* Info.plist */,
 			);
 			path = KZ;
@@ -185,6 +187,8 @@
 				EAD9CF361C56F126009FC9AA /* KZIntrinsicTableView.swift in Sources */,
 				EAD9CF6F1C56F683009FC9AA /* KZExtensions.swift in Sources */,
 				EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */,
+				EA481DF41C63223A008E3E6E /* Reusable.swift in Sources */,
+				EA481DF61C6322AD008E3E6E /* NibLoadable.swift in Sources */,
 				EAD9CF331C56F114009FC9AA /* KZTableViewController.swift in Sources */,
 				EAD9CF6D1C56F627009FC9AA /* KZFunctions.swift in Sources */,
 				EAD9CF311C56F114009FC9AA /* KZViewController.swift in Sources */,
