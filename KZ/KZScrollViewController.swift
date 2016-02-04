@@ -24,15 +24,8 @@ public class KZScrollViewController: KZViewController {
     public override func setupConstraints() {
         super.setupConstraints()
         
-        scrollView.autoPinEdgeToSuperviewEdge(.Left)
-        scrollView.autoPinEdgeToSuperviewEdge(.Right)
-        scrollView.autoPinEdgeToSuperviewEdge(.Top)
-        scrollView.autoPinToBottomLayoutGuideOfViewController(self, withInset: 0)
-        
-        contentView.autoPinEdgeToSuperviewEdge(.Right)
-        contentView.autoPinEdgeToSuperviewEdge(.Left)
-        contentView.autoPinEdgeToSuperviewEdge(.Top)
-        contentView.autoPinEdgeToSuperviewEdge(.Bottom)
-        contentView.autoMatchDimension(.Width, toDimension: .Width, ofView: scrollView)
+        scrollView.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsZero)
+        contentView.autoPinEdgesToSuperviewEdgesWithInsets(UIEdgeInsetsZero)
+        contentView.autoMatchDimension(.Width, toDimension: .Width, ofView: view)
     }
 }

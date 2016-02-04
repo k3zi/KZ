@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
     spec.name = "KZ"
 
-    spec.version = "1.3.4"
+    spec.version = "1.3.5"
     spec.summary = "Framework base for iOS projects"
     spec.homepage = "http://kez.io"
     spec.license = { type: 'MIT', file: 'LICENSE' }
@@ -14,4 +14,5 @@ Pod::Spec.new do |spec|
     spec.source_files = "KZ/**/*.{swift}"
 
     spec.dependency "PureLayout"
+    spec.dependency "Reusable"
 end

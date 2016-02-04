@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Reusable
 
 public class KZViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var didSetConstraints = false
@@ -22,7 +23,7 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.whiteColor()
         if fetchOnLoad {
@@ -33,7 +34,7 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.view.setNeedsUpdateConstraints()
-
+        
         didPresentVC = false
     }
     
@@ -67,9 +68,9 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
         
         super.updateViewConstraints()
     }
-
+    
     public func setupConstraints() {
-
+        
     }
     
     public dynamic func fetchData() {
@@ -125,7 +126,8 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         tableView.userInteractionEnabled = true
-        let cell = tableViewCellClass(tableView, indexPath: indexPath).init(style: .Default, reuseIdentifier: String(tableView.tag))
+        
+        let cell = tableView.dequeueReusableCell(indexPath: indexPath) as KZTableViewCell
         cell.setIndexPath(indexPath, last: indexPath.row == (self.tableView(tableView, numberOfRowsInSection: indexPath.section) - 1))
         if cell.tag != -1 {
             cell.setContent(tableViewCellData(tableView, section: indexPath.section)[indexPath.row])
