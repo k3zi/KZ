@@ -8,7 +8,7 @@ before_install:
     - gem install cocoapods -v 0.39.0 --no-rdoc --no-ri --no-document --quiet
 
 script:
-    - xctool -workspace KZ.xcworkspace -scheme KZ -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES ONLY_ACTIVE_ARCH=NO
+    - xctool -workspace KZ.xcworkspace -scheme KZ build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES ONLY_ACTIVE_ARCH=NO
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)

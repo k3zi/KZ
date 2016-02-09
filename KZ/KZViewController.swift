@@ -116,7 +116,11 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
             let cell = UITableViewCell(style: .Default, reuseIdentifier: "NoneFound")
             cell.textLabel?.numberOfLines = 0
             cell.textLabel?.text = tableViewNoDataText(tableView)
-            cell.textLabel?.font = UIFont.systemFontOfSize(20, weight: UIFontWeightLight)
+            if #available(iOS 8.2, *) {
+                cell.textLabel?.font = UIFont.systemFontOfSize(20, weight: UIFontWeightLight)
+            } else {
+                // Fallback on earlier versions
+            }
             cell.textLabel?.textAlignment = .Center
             cell.textLabel?.textColor = UIColor.grayColor()
             cell.selectionStyle = .None
