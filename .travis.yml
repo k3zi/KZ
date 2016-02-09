@@ -1,5 +1,7 @@
 language: objective-c
 osx_image: xcode7
+xcode_workspace: KZ.xcworkspace
+xcode_scheme: KZ
 
 before_install:
     - gem install activesupport
