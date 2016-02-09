@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
     spec.version = "1.3.72"
     spec.summary = "Framework base for iOS projects"
-    spec.homepage = "http://kez.io"
+    spec.homepage = "https://github.com/k3zi/KZ"
     spec.license = { type: 'MIT', file: 'LICENSE' }
     spec.authors = { "Kesi Maduka" => 'me@kez.io' }
     spec.social_media_url = "https://twitter.com/k3zi_"
