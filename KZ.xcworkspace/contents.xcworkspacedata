@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "absolute:/Users/Kezi/Dropbox/Projects/KZ/KZ.xcodeproj">
+      location = "group:KZ.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/PureLayout/PureLayout/PureLayout.xcodeproj">
