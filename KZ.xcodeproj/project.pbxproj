@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA09442D1C69F0A700C2F98E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09442C1C69F0A700C2F98E /* AppDelegate.swift */; };
+		EA09442F1C69F0A700C2F98E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA09442E1C69F0A700C2F98E /* ViewController.swift */; };
+		EA0944321C69F0A700C2F98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0944301C69F0A700C2F98E /* Main.storyboard */; };
+		EA0944341C69F0A700C2F98E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0944331C69F0A700C2F98E /* Assets.xcassets */; };
+		EA0944371C69F0A700C2F98E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0944351C69F0A700C2F98E /* LaunchScreen.storyboard */; };
+		EA09443C1C69F0B400C2F98E /* KZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9CF231C56B7B0009FC9AA /* KZ.framework */; };
+		EA09443D1C69F0B400C2F98E /* KZ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9CF231C56B7B0009FC9AA /* KZ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA481DF41C63223A008E3E6E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA481DF31C63223A008E3E6E /* Reusable.swift */; };
 		EA481DF61C6322AD008E3E6E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA481DF51C6322AD008E3E6E /* NibLoadable.swift */; };
 		EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */; };
@@ -30,7 +37,38 @@
 		EAF08F5C1C584AA000163104 /* KZExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA09443E1C69F0B400C2F98E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAD9CF1A1C56B7B0009FC9AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAD9CF221C56B7B0009FC9AA;
+			remoteInfo = KZ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA0944401C69F0B400C2F98E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA09443D1C69F0B400C2F98E /* KZ.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EA09442A1C69F0A700C2F98E /* KZExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA09442C1C69F0A700C2F98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA09442E1C69F0A700C2F98E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA0944311C69F0A700C2F98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA0944331C69F0A700C2F98E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA0944361C69F0A700C2F98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA0944381C69F0A700C2F98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA481DF31C63223A008E3E6E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		EA481DF51C6322AD008E3E6E /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZScrollViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +87,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA0944271C69F0A700C2F98E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA09443C1C69F0B400C2F98E /* KZ.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAD9CF1F1C56B7B0009FC9AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,10 +106,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA09442B1C69F0A700C2F98E /* KZExample */ = {
+			isa = PBXGroup;
+			children = (
+				EA09442C1C69F0A700C2F98E /* AppDelegate.swift */,
+				EA09442E1C69F0A700C2F98E /* ViewController.swift */,
+				EA0944301C69F0A700C2F98E /* Main.storyboard */,
+				EA0944331C69F0A700C2F98E /* Assets.xcassets */,
+				EA0944351C69F0A700C2F98E /* LaunchScreen.storyboard */,
+				EA0944381C69F0A700C2F98E /* Info.plist */,
+			);
+			path = KZExample;
+			sourceTree = "<group>";
+		};
 		EAD9CF191C56B7B0009FC9AA = {
 			isa = PBXGroup;
 			children = (
 				EAD9CF251C56B7B0009FC9AA /* KZ */,
+				EA09442B1C69F0A700C2F98E /* KZExample */,
 				EAD9CF241C56B7B0009FC9AA /* Products */,
 				EAD9CF6A1C56F3CC009FC9AA /* PureLayout.framework */,
 			);
@@ -73,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				EAD9CF231C56B7B0009FC9AA /* KZ.framework */,
+				EA09442A1C69F0A700C2F98E /* KZExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +141,7 @@
 		EAD9CF251C56B7B0009FC9AA /* KZ */ = {
 			isa = PBXGroup;
 			children = (
+				EAD9CF261C56B7B0009FC9AA /* KZ.h */,
 				EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */,
 				EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */,
 				EAD9CF2F1C56F114009FC9AA /* KZCollectionViewController.swift */,
@@ -89,7 +151,6 @@
 				EAD9CF381C56F18F009FC9AA /* KZTableViewCell.swift */,
 				EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */,
 				EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */,
-				EAD9CF261C56B7B0009FC9AA /* KZ.h */,
 				EA481DF51C6322AD008E3E6E /* NibLoadable.swift */,
 				EA481DF31C63223A008E3E6E /* Reusable.swift */,
 				EAD9CF281C56B7B0009FC9AA /* Info.plist */,
@@ -119,6 +180,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EA0944291C69F0A700C2F98E /* KZExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0944391C69F0A700C2F98E /* Build configuration list for PBXNativeTarget "KZExample" */;
+			buildPhases = (
+				EA0944261C69F0A700C2F98E /* Sources */,
+				EA0944271C69F0A700C2F98E /* Frameworks */,
+				EA0944281C69F0A700C2F98E /* Resources */,
+				EA0944401C69F0B400C2F98E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA09443F1C69F0B400C2F98E /* PBXTargetDependency */,
+			);
+			name = KZExample;
+			productName = KZExample;
+			productReference = EA09442A1C69F0A700C2F98E /* KZExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EAD9CF221C56B7B0009FC9AA /* KZ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAD9CF2B1C56B7B0009FC9AA /* Build configuration list for PBXNativeTarget "KZ" */;
@@ -143,9 +223,13 @@
 		EAD9CF1A1C56B7B0009FC9AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Storm Edge Apps LLC";
 				TargetAttributes = {
+					EA0944291C69F0A700C2F98E = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					EAD9CF221C56B7B0009FC9AA = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -157,6 +241,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = EAD9CF191C56B7B0009FC9AA;
 			productRefGroup = EAD9CF241C56B7B0009FC9AA /* Products */;
@@ -164,11 +249,22 @@
 			projectRoot = "";
 			targets = (
 				EAD9CF221C56B7B0009FC9AA /* KZ */,
+				EA0944291C69F0A700C2F98E /* KZExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA0944281C69F0A700C2F98E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0944371C69F0A700C2F98E /* LaunchScreen.storyboard in Resources */,
+				EA0944341C69F0A700C2F98E /* Assets.xcassets in Resources */,
+				EA0944321C69F0A700C2F98E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAD9CF211C56B7B0009FC9AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +275,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA0944261C69F0A700C2F98E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA09442F1C69F0A700C2F98E /* ViewController.swift in Sources */,
+				EA09442D1C69F0A700C2F98E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAD9CF1E1C56B7B0009FC9AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,7 +304,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EA09443F1C69F0B400C2F98E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAD9CF221C56B7B0009FC9AA /* KZ */;
+			targetProxy = EA09443E1C69F0B400C2F98E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA0944301C69F0A700C2F98E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA0944311C69F0A700C2F98E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA0944351C69F0A700C2F98E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA0944361C69F0A700C2F98E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		EA09443A1C69F0A700C2F98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KZExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stormedgeapps.KZExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA09443B1C69F0A700C2F98E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KZExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stormedgeapps.KZExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		EAD9CF291C56B7B0009FC9AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,6 +492,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA0944391C69F0A700C2F98E /* Build configuration list for PBXNativeTarget "KZExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA09443A1C69F0A700C2F98E /* Debug */,
+				EA09443B1C69F0A700C2F98E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EAD9CF1D1C56B7B0009FC9AA /* Build configuration list for PBXProject "KZ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
