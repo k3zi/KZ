@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
     spec.name = "KZ"
 
-    spec.version = "1.3.6"
+    spec.version = "1.3.7"
     spec.summary = "Framework base for iOS projects"
     spec.homepage = "http://kez.io"
     spec.license = { type: 'MIT', file: 'LICENSE' }
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
     spec.platform = :ios, "9.0"
     spec.requires_arc = true
-    spec.source = { git: "https://github.com/k3zi/KZ.git", tag: "v#{spec.version}", submodules: true }
+    spec.source = { git: "https://github.com/k3zi/KZ.git", tag: spec.version, submodules: true }
     spec.source_files = "KZ/**/*.{swift}"
 
     spec.dependency "PureLayout"
