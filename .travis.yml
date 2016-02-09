@@ -7,6 +7,9 @@ before_install:
     - gem install activesupport
     - gem install cocoapods -v 0.39.0 --no-rdoc --no-ri --no-document --quiet
 
+script:
+    - xctool -workspace KZ.xcworkspace -scheme KZ -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
 branches:
   only:
     - master
