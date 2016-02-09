@@ -14,5 +14,4 @@ Pod::Spec.new do |spec|
     spec.source_files = "KZ/**/*.{swift}"
 
     spec.dependency "PureLayout"
-    spec.dependency "Reusable"
 end
