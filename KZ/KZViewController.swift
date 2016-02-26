@@ -131,7 +131,7 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.userInteractionEnabled = true
         let cellClass = tableViewCellClass(tableView, indexPath: indexPath)
         
-        let cell = tableView.dequeueReusableCell(indexPath, cellType: cellClass)
+        let cell = tableView.dequeueReusableCell(indexPath: indexPath, cellType: cellClass)
         cell.setIndexPath(indexPath, last: indexPath.row == (self.tableView(tableView, numberOfRowsInSection: indexPath.section) - 1))
         if cell.tag != -1 {
             cell.setContent(tableViewCellData(tableView, section: indexPath.section)[indexPath.row])

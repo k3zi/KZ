@@ -14,8 +14,6 @@
 		EA0944371C69F0A700C2F98E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0944351C69F0A700C2F98E /* LaunchScreen.storyboard */; };
 		EA09443C1C69F0B400C2F98E /* KZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9CF231C56B7B0009FC9AA /* KZ.framework */; };
 		EA09443D1C69F0B400C2F98E /* KZ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAD9CF231C56B7B0009FC9AA /* KZ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA481DF41C63223A008E3E6E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA481DF31C63223A008E3E6E /* Reusable.swift */; };
-		EA481DF61C6322AD008E3E6E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA481DF51C6322AD008E3E6E /* NibLoadable.swift */; };
 		EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */; };
 		EAD9CF271C56B7B0009FC9AA /* KZ.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF261C56B7B0009FC9AA /* KZ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAD9CF311C56F114009FC9AA /* KZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */; };
@@ -35,6 +33,7 @@
 		EAF08F5A1C584AA000163104 /* KZTableViewCell.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF381C56F18F009FC9AA /* KZTableViewCell.swift */; };
 		EAF08F5B1C584AA000163104 /* KZFunctions.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */; };
 		EAF08F5C1C584AA000163104 /* KZExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */; };
+		EAF441801C800C0D00C0278E /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF4417F1C800C0D00C0278E /* Reusable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +68,6 @@
 		EA0944331C69F0A700C2F98E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA0944361C69F0A700C2F98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0944381C69F0A700C2F98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA481DF31C63223A008E3E6E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		EA481DF51C6322AD008E3E6E /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZScrollViewController.swift; sourceTree = "<group>"; };
 		EAD9CF231C56B7B0009FC9AA /* KZ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KZ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD9CF261C56B7B0009FC9AA /* KZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZ.h; sourceTree = "<group>"; };
@@ -84,6 +81,7 @@
 		EAD9CF6A1C56F3CC009FC9AA /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = "Carthage/Checkouts/PureLayout/PureLayout/build/Debug-iphoneos/PureLayout.framework"; sourceTree = "<group>"; };
 		EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZFunctions.swift; sourceTree = "<group>"; };
 		EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZExtensions.swift; sourceTree = "<group>"; };
+		EAF4417F1C800C0D00C0278E /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = "Carthage/Checkouts/Reusable/Example/Pods/../build/Debug-iphoneos/Reusable.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF441801C800C0D00C0278E /* Reusable.framework in Frameworks */,
 				EAD9CF6B1C56F3CC009FC9AA /* PureLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +125,7 @@
 				EA09442B1C69F0A700C2F98E /* KZExample */,
 				EAD9CF241C56B7B0009FC9AA /* Products */,
 				EAD9CF6A1C56F3CC009FC9AA /* PureLayout.framework */,
+				EAF4417F1C800C0D00C0278E /* Reusable.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,8 +151,6 @@
 				EAD9CF381C56F18F009FC9AA /* KZTableViewCell.swift */,
 				EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */,
 				EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */,
-				EA481DF51C6322AD008E3E6E /* NibLoadable.swift */,
-				EA481DF31C63223A008E3E6E /* Reusable.swift */,
 				EAD9CF281C56B7B0009FC9AA /* Info.plist */,
 			);
 			path = KZ;
@@ -292,8 +290,6 @@
 				EAD9CF361C56F126009FC9AA /* KZIntrinsicTableView.swift in Sources */,
 				EAD9CF6F1C56F683009FC9AA /* KZExtensions.swift in Sources */,
 				EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */,
-				EA481DF41C63223A008E3E6E /* Reusable.swift in Sources */,
-				EA481DF61C6322AD008E3E6E /* NibLoadable.swift in Sources */,
 				EAD9CF331C56F114009FC9AA /* KZTableViewController.swift in Sources */,
 				EAD9CF6D1C56F627009FC9AA /* KZFunctions.swift in Sources */,
 				EAD9CF311C56F114009FC9AA /* KZViewController.swift in Sources */,
@@ -458,6 +454,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Checkouts/PureLayout/PureLayout/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Reusable/Example/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = KZ/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -480,6 +477,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Checkouts/PureLayout/PureLayout/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Reusable/Example/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = KZ/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

@@ -8,6 +8,7 @@
 
 import UIKit
 import PureLayout
+import Reusable
 
 public class KZTableViewCell: UITableViewCell, Reusable {
     public let topSeperator = UIView()
