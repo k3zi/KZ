@@ -1,9 +1,9 @@
 //
-//  DawgUserCell.swift
+//  KZTableViewCell.swift
+//  KZ
 //
-//
-//  Created by Kesi Maduka on 8/20/15.
-//
+//  Created by Kesi Maduka on 1/25/16.
+//  Copyright © 2016 Storm Edge Apps LLC. All rights reserved.
 //
 
 import UIKit
