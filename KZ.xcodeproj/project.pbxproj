@@ -17,7 +17,6 @@
 		EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */; };
 		EAD9CF271C56B7B0009FC9AA /* KZ.h in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF261C56B7B0009FC9AA /* KZ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAD9CF311C56F114009FC9AA /* KZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */; };
-		EAD9CF321C56F114009FC9AA /* KZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF2F1C56F114009FC9AA /* KZCollectionViewController.swift */; };
 		EAD9CF331C56F114009FC9AA /* KZTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF301C56F114009FC9AA /* KZTableViewController.swift */; };
 		EAD9CF361C56F126009FC9AA /* KZIntrinsicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF341C56F126009FC9AA /* KZIntrinsicTableView.swift */; };
 		EAD9CF371C56F126009FC9AA /* KZIntrinsicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF351C56F126009FC9AA /* KZIntrinsicCollectionView.swift */; };
@@ -26,7 +25,6 @@
 		EAD9CF6D1C56F627009FC9AA /* KZFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF6C1C56F627009FC9AA /* KZFunctions.swift */; };
 		EAD9CF6F1C56F683009FC9AA /* KZExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9CF6E1C56F683009FC9AA /* KZExtensions.swift */; };
 		EAF08F551C584AA000163104 /* KZViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */; };
-		EAF08F561C584AA000163104 /* KZCollectionViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF2F1C56F114009FC9AA /* KZCollectionViewController.swift */; };
 		EAF08F571C584AA000163104 /* KZTableViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF301C56F114009FC9AA /* KZTableViewController.swift */; };
 		EAF08F581C584AA000163104 /* KZIntrinsicTableView.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF341C56F126009FC9AA /* KZIntrinsicTableView.swift */; };
 		EAF08F591C584AA000163104 /* KZIntrinsicCollectionView.swift in Headers */ = {isa = PBXBuildFile; fileRef = EAD9CF351C56F126009FC9AA /* KZIntrinsicCollectionView.swift */; };
@@ -73,7 +71,6 @@
 		EAD9CF261C56B7B0009FC9AA /* KZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZ.h; sourceTree = "<group>"; };
 		EAD9CF281C56B7B0009FC9AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZViewController.swift; sourceTree = "<group>"; };
-		EAD9CF2F1C56F114009FC9AA /* KZCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZCollectionViewController.swift; sourceTree = "<group>"; };
 		EAD9CF301C56F114009FC9AA /* KZTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZTableViewController.swift; sourceTree = "<group>"; };
 		EAD9CF341C56F126009FC9AA /* KZIntrinsicTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZIntrinsicTableView.swift; sourceTree = "<group>"; };
 		EAD9CF351C56F126009FC9AA /* KZIntrinsicCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KZIntrinsicCollectionView.swift; sourceTree = "<group>"; };
@@ -144,7 +141,6 @@
 				EAD9CF261C56B7B0009FC9AA /* KZ.h */,
 				EAD9CF2E1C56F114009FC9AA /* KZViewController.swift */,
 				EA4E494E1C61B8D200CB40D7 /* KZScrollViewController.swift */,
-				EAD9CF2F1C56F114009FC9AA /* KZCollectionViewController.swift */,
 				EAD9CF301C56F114009FC9AA /* KZTableViewController.swift */,
 				EAD9CF341C56F126009FC9AA /* KZIntrinsicTableView.swift */,
 				EAD9CF351C56F126009FC9AA /* KZIntrinsicCollectionView.swift */,
@@ -165,7 +161,6 @@
 			files = (
 				EAD9CF271C56B7B0009FC9AA /* KZ.h in Headers */,
 				EAF08F551C584AA000163104 /* KZViewController.swift in Headers */,
-				EAF08F561C584AA000163104 /* KZCollectionViewController.swift in Headers */,
 				EAF08F571C584AA000163104 /* KZTableViewController.swift in Headers */,
 				EAF08F581C584AA000163104 /* KZIntrinsicTableView.swift in Headers */,
 				EAF08F591C584AA000163104 /* KZIntrinsicCollectionView.swift in Headers */,
@@ -286,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD9CF321C56F114009FC9AA /* KZCollectionViewController.swift in Sources */,
 				EAD9CF361C56F126009FC9AA /* KZIntrinsicTableView.swift in Sources */,
 				EAD9CF6F1C56F683009FC9AA /* KZExtensions.swift in Sources */,
 				EA4E494F1C61B8D200CB40D7 /* KZScrollViewController.swift in Sources */,
