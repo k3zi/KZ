@@ -155,7 +155,7 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
             if #available(iOS 8.2, *) {
                 cell.textLabel?.font = UIFont.systemFontOfSize(20, weight: UIFontWeightLight)
             } else {
-                // Fallback on earlier versions
+                cell.textLabel?.font = UIFont.systemFontOfSize(20)
             }
             cell.textLabel?.textAlignment = .Center
             cell.textLabel?.textColor = UIColor.grayColor()
