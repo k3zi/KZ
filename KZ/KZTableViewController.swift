@@ -12,13 +12,13 @@ public class KZTableViewController: KZViewController {
     
     public var tableView: UITableView? = nil
     public var items = [Any]()
-    public var ct = true
+    public var createTable = true
     
     //MARK: Setup View
     
     public convenience init(createTable: Bool) {
         self.init()
-        self.ct = createTable
+        self.createTable = createTable
     }
     
     override public func viewDidLoad() {
@@ -26,7 +26,7 @@ public class KZTableViewController: KZViewController {
         
         // Do any additional setup after loading the view.
         
-        if ct {
+        if createTable {
             tableView = UITableView(frame: view.bounds, style: .Grouped)
             tableView!.delegate = self
             tableView!.dataSource = self
@@ -41,7 +41,7 @@ public class KZTableViewController: KZViewController {
     override public func setupConstraints() {
         super.setupConstraints()
         
-        if ct {
+        if createTable {
             tableView!.autoPinToTopLayoutGuideOfViewController(self, withInset: 0.0)
             tableView!.autoPinEdgeToSuperviewEdge(.Left)
             tableView!.autoPinEdgeToSuperviewEdge(.Right)
