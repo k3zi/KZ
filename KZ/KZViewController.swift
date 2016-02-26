@@ -67,11 +67,17 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
         
         super.updateViewConstraints()
     }
-    
+
+    /**
+     Setup any constraints in here
+     */
     public func setupConstraints() {
         
     }
-    
+
+    /**
+     Make calls to the network here. NOTICE: By default this is called every 15 seconds
+     */
     public dynamic func fetchData() {
         
     }
@@ -81,7 +87,53 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-    //MARK: Tableview Datasource/Delegate
+    //MARK: TableView Datasource/Delegate
+
+    /**
+    Override to specify a cell class for each row
+
+    - parameter tableView: The table that is requesting a cell's class.
+    - parameter indexPath: The indexPath the tableView needs the class for.
+
+    - returns: The class to be used for the tableView at the specified indexPath
+    */
+    public func tableViewCellClass(tableView: UITableView, indexPath: NSIndexPath? = nil) -> KZTableViewCell.Type {
+        return KZTableViewCell.self
+    }
+
+    /**
+     Override to specify the data for each section
+
+     - parameter tableView: The table that is requesting a section's data
+     - parameter section:   The section the tableView needs data for
+
+     - returns: The data to be used for the tableView with the specified section
+     */
+    public func tableViewCellData(tableView: UITableView, section: Int) -> [Any] {
+        return []
+    }
+
+    /**
+     Override to change the text when there is no data
+
+     - parameter tableView: The empty tableView that is requesting text to dipslay
+
+     - returns: The text to be displayed for the empty tableView
+     */
+    public func tableViewNoDataText(tableView: UITableView) -> String {
+        return "No Results Found"
+    }
+
+    /**
+     Override to show a section header
+
+     - parameter tableView: The tableView that is asking whether to show the section header
+
+     - returns: True/False for if the section header should be displayed
+     */
+    public func tableViewShowsSectionHeader(tableView: UITableView) -> Bool {
+        return false
+    }
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -93,22 +145,6 @@ public class KZViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         return self.tableViewCellData(tableView, section: section).count
-    }
-    
-    public func tableViewCellClass(tableView: UITableView, indexPath: NSIndexPath? = nil) -> KZTableViewCell.Type {
-        return KZTableViewCell.self
-    }
-    
-    public func tableViewCellData(tableView: UITableView, section: Int) -> [Any] {
-        return []
-    }
-    
-    public func tableViewNoDataText(tableView: UITableView) -> String {
-        return "No Results Found"
-    }
-    
-    public func tableViewShowsSectionHeader(tableView: UITableView) -> Bool {
-        return false
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
