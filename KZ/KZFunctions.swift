@@ -8,12 +8,12 @@
 
 import Foundation
 
-public func RGB(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 255.0) -> UIColor {
-    return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a/255.0)
+public func RGB(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 1.0) -> UIColor {
+	return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
 }
 
-public func RGB(x: CGFloat, a: CGFloat = 255.0) -> UIColor {
-    return RGB(x, g: x, b: x, a: a)
+public func RGB(x: CGFloat, a: CGFloat = 1.0) -> UIColor {
+	return RGB(x, g: x, b: x, a: a)
 }
 
 public func HEX(str: String) -> UIColor {
