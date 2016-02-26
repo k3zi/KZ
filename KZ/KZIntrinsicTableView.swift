@@ -54,4 +54,5 @@ public class KZIntrinsicTableView: UITableView {
         super.deleteSections(sections, withRowAnimation: animation)
         self.invalidateIntrinsicContentSize()
     }
+    
 }
