@@ -28,6 +28,7 @@ public class KZTableViewCell: UITableViewCell, Reusable {
         self.contentView.bounds.size.height = 99999
     }
     
+    //MARK: Setup Constraints
     override public func updateConstraints() {
         super.updateConstraints()
         if didSetupConstraints {
@@ -44,13 +45,7 @@ public class KZTableViewCell: UITableViewCell, Reusable {
         topSeperator.autoPinEdgeToSuperviewEdge(.Left)
         topSeperator.autoPinEdgeToSuperviewEdge(.Right)
         
-        setupConstraints()
-        
         didSetupConstraints = true
-    }
-    
-    func setupConstraints() {
-        
     }
     
     public func getHeight() -> CGFloat {
