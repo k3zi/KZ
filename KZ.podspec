@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.authors = { "Kesi Maduka" => 'me@kez.io' }
     spec.social_media_url = "https://twitter.com/k3zi_"
 
-    spec.platform = :ios, "9.0"
+    spec.platform = :ios, "8.0"
     spec.requires_arc = true
     spec.source = { git: "https://github.com/k3zi/KZ.git", tag: spec.version, submodules: true }
     spec.source_files = "KZ/**/*.{swift}"
