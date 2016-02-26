@@ -80,6 +80,12 @@ public class KZTableViewCell: UITableViewCell, Reusable {
         
     }
     
+    override public func prepareForReuse() {
+        super.prepareForReuse()
+        
+        model = nil
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
