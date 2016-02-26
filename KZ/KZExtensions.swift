@@ -139,7 +139,6 @@ public extension UIViewController {
                             if let errorCompletion = errorCompletion {
                                 errorCompletion(error)
                             }
-                            self.showError(error)
 						}
 					}
 				}
