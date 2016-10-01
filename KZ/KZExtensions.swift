@@ -36,7 +36,7 @@ public extension UIView {
 
 public extension UIButton {
 
-    override public var intrinsicContentSize : CGSize {
+    override open var intrinsicContentSize : CGSize {
         let intrinsicContentSize = super.intrinsicContentSize
 
         let adjustedWidth = intrinsicContentSize.width + titleEdgeInsets.left + titleEdgeInsets.right

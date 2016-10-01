@@ -1,19 +1,24 @@
 language: objective-c
-osx_image: xcode7
+osx_image: xcode8
 xcode_workspace: KZ.xcworkspace
 xcode_scheme: KZ
 
 before_install:
-    - gem install activesupport
-    - gem install cocoapods -v 0.39.0 --no-rdoc --no-ri --no-document --quiet
+  - brew install swiftlint
+  - gem install cocoapods --pre
+
+matrix:
+    include:
+        # Swift 3.0
+        - os: osx
+          osx_image: xcode8
+          env:
+            - TASK=lintpod
+              SWIFT_VERSION=3.0
 
 script:
-    - xctool -workspace KZ.xcworkspace -scheme KZ build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES ONLY_ACTIVE_ARCH=NO
-
-after_success:
-    - bash <(curl -s https://codecov.io/bash)
+  - rake ci:$TASK
 
 branches:
   only:
     - master
-
