@@ -225,6 +225,7 @@
 					};
 					EAD9CF221C56B7B0009FC9AA = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -457,6 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stormedgeapps.KZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -480,6 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stormedgeapps.KZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
