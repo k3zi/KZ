@@ -1,0 +1,24 @@
+PODS:
+  - PureLayout (3.1.4)
+  - Reusable (4.0.5):
+    - Reusable/Storyboard (= 4.0.5)
+    - Reusable/View (= 4.0.5)
+  - Reusable/Storyboard (4.0.5)
+  - Reusable/View (4.0.5)
+
+DEPENDENCIES:
+  - PureLayout
+  - Reusable
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PureLayout
+    - Reusable
+
+SPEC CHECKSUMS:
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
+
+PODFILE CHECKSUM: 7e9cc51f819de13efef0381071963468e840d64d
+
+COCOAPODS: 1.6.0.beta.2

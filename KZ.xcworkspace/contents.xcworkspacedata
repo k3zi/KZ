@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Carthage/Checkouts/Reusable/Example/Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:KZ.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/PureLayout/PureLayout/PureLayout.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
