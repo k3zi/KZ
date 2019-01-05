@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode10.1
 xcode_workspace: KZ.xcworkspace
 xcode_scheme: KZ
 
@@ -9,12 +9,11 @@ before_install:
 
 matrix:
     include:
-        # Swift 3.0
         - os: osx
-          osx_image: xcode8
+          osx_image: xcode10.1
           env:
             - TASK=lintpod
-              SWIFT_VERSION=3.0
+              SWIFT_VERSION=4.2
 
 script:
   - rake ci:$TASK

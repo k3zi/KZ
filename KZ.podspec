@@ -9,6 +9,7 @@ Pod::Spec.new do |spec|
     spec.social_media_url = "https://twitter.com/k3zi_"
 
     spec.platform = :ios, "10.0"
+    spec.swift_version = '4.2'
     spec.requires_arc = true
     spec.source = { git: "https://github.com/k3zi/KZ.git", tag: spec.version.to_s, submodules: true }
     spec.source_files = "KZ/**/*.{swift}"
