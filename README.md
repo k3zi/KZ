@@ -5,7 +5,7 @@ A base framework for iOS projects
 
 #### Install with CocoaPods
 ```
-pod 'KZ', '~> 1.3'
+pod 'KZ', '~> 3.0'
 ```
 
 ## Classes Notes
